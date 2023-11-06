@@ -7,7 +7,44 @@
 </head>
 <body>
     <div class="content">
-        
+        <div class="popup-window-inner">
+            <form>
+                <fieldset>
+                  <legend>Add New To-Do</legend>
+                  <div class = "form">
+                    <div class = labelinput>
+                      <label for="title">Title</label>
+                      <input type="text" name="title" id="title" />
+                      
+                    </div>
+                    <div class = labelinput>
+                      <label for="description">Description</label>
+                      <input type="text" name=description" id = "description"/>
+                      
+                    </div>
+                     <div class = labelinput>
+                      <label for="dueDate">Due Date</label>
+                      <input type="datetime-local" name="dueDate" id = "dueDate"/>
+                      
+                    </div>
+                    <div class = labelinput>
+                        <label for="priority">Priority</label>
+                        <select name="priority" id="priority">
+                            <option  value="high">High</option>
+                            <option  selected value="medium">Medium</option>
+                            <option value="low">Low</option>
+                          </select>
+                      </div>
+                    
+                  </div>
+                  </div>
+                  <button class = submit-btn id = "submit-btn" type="button" >Submit</button>
+                </fieldset>
+              </form>
+              <div class = "alert closed">
+                Please fill all fields.
+              </div>
+        </div>
     </div>
 </body>
 </html>

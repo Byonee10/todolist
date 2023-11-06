@@ -1,13 +1,12 @@
-import Projects from "./Projects";
-
+import toDoList from "./toDoList";
 const userInput = () => {
-    const title = prompt("Title:");
-    const description = prompt("Description:");
-    const dueDate = prompt("Due date:");
-    const priority = prompt("Priority");
+    const title = document.querySelector('#title').value;
+    const description = document.querySelector('#description').value
+    const dueDate = document.querySelector('#dueDate').value
+    const priority = pdocument.querySelector('#priority').value
 
-    Projects.addToProjects(title,description,dueDate,priority);
-    console.log(Projects.projects);
+    toDoList.addTotoDoList(title,description,dueDate,priority);
+    toDoList.print();
 }
 
 export default userInput;

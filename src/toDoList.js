@@ -22,7 +22,12 @@ const toDoList = (() => {
             toDoList[index].priority = newPriority;
         }
     }
-
+    function print(){
+        
+        for(let i = 0;i<toDoList.length;i++){
+            console.log(toDoList[i]);
+        }
+    }
     function filterItemsByPriority(priority){
         return toDoList.filter((todo) => todo.priority == priority);
     }
@@ -37,14 +42,16 @@ const toDoList = (() => {
             toDoList = JSON.parse(storedtoDoList);
         }
     }
-
+    
     return{
         addTotoDoList, 
         removeItemById,
         editItem,
         filterItemsByPriority,
+        print,
         saveToLocalStorage,
         loadFromLocalStorage
+        
     }
 })();
 export default toDoList;
